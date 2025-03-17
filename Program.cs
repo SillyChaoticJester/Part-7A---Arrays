@@ -12,6 +12,7 @@
                 arrayTest[i] = generator.Next(1, 101);
                 Console.Write(arrayTest[i] + " ");
             }
+            Console.WriteLine();
             for (int f = 0; f < arrayTest.Length; f++)
             {
                 if (arrayTest[f] % 2 == 0)
@@ -25,8 +26,28 @@
                 }
             }
             Console.WriteLine();
+            for (int i = 1; i < arrayTest.Length; i += 2)
+            {
+                arrayTest[i] *= 2;
+            }
+            for (int i = 0; i < arrayTest.Length; i++)
+            {
+                Console.Write(arrayTest[i] + " ");
+            }
+            Array.Sort(arrayTest);
+            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine($"There was {count} even numbes on in the list.");
+            Console.WriteLine($"Min - {arrayTest[0]}, Max - {arrayTest[arrayTest.Length - 1]}");
+
+            //Questions:
+            //
+            //I think the array would only be filled with blank spaces in the newer spaces
+            //It wouldn't work, it would probably try to pull from an array that doesn't exist
+            //It might just be zero
+            //I don't think so
+            //
+
         }
     }
 }
